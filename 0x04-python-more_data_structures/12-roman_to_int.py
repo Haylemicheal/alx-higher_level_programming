@@ -2,6 +2,8 @@
 def roman_to_int(s):
     roman = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     val = 0
+    if (type(s) != str or len(s) == 0):
+        return 0
     size = len(s)
     val = roman[s[size - 1]]
 
