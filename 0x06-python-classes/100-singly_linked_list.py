@@ -5,6 +5,9 @@ This module defines linked lists
 
 
 class Node:
+    """
+    Defines a node
+    """
     def __init__(self, data, next_node=None):
         self.__data = data
         self.__next_node = next_node
@@ -31,10 +34,10 @@ class Node:
 
 
 class SinglyLinkedList:
+    """
+    Defines siglylinkedlist
+    """
     def __init__(self):
-        """
-        defines the singly linked list
-        """
         self.__head = None
 
     def sorted_insert(self, value):
