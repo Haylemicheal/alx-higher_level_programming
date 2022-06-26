@@ -14,10 +14,10 @@ def add_integer(a, b=98):
     """
     try:
         assert type(a) in [int, float]
-    except:
+    except Exception:
         raise TypeError("a must be an integer")
     try:
         assert type(b) in [int, float]
-    except:
+    except Exception:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
