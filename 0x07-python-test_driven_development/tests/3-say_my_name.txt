@@ -17,8 +17,8 @@ This is the test file for printing a name. First import
 
 	>>> say_my_name(1)
 	Traceback (most recent call last):
-	TypeError: first_name must be a string or last_name must be a string
+	TypeError: first_name must be a string
 
 	>>> say_my_name("Abebe", 2)
 	Traceback (most recent call last):
-	TypeError: first_name must be a string or last_name must be a string
+	TypeError: last_name must be a string

@@ -10,7 +10,10 @@ def say_my_name(first_name, last_name=""):
     first_name: First Name input
     last_name: Last name input
     """
-    err = "first_name must be a string or last_name must be a string"
-    if (type(first_name) is not str or type(last_name) is not str):
+    err = "first_name must be a string"
+    err1 = "last_name must be a string"
+    if (type(first_name) is not str):
         raise TypeError(err)
+    if (type(last_name) is not str):
+        raise TypeError(err1)
     print("My name is {} {}".format(first_name, last_name))
