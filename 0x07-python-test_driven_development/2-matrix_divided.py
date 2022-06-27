@@ -2,6 +2,8 @@
 """
 A module for division of a matrix by a number
 """
+
+
 def matrix_divided(matrix, div):
     """
     Division of matrix by div
@@ -10,6 +12,7 @@ def matrix_divided(matrix, div):
 
     Return: A new matrix of matrix / div
     """
+    err = "matrix must be a matrix (list of lists) of integers/floats"
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
     elif div == 0:
@@ -21,7 +24,7 @@ def matrix_divided(matrix, div):
         temp = []
         for j in i:
             if (type(j) not in [int, float]):
-                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(err)
             temp.append(round(j/3, 2))
         newmatrix.append(temp)
     return newmatrix
