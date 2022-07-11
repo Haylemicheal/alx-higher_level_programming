@@ -81,3 +81,12 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(r1), "[Rectangle] (12) 2/1 - 4/6")
         id = Rectangle._Base__nb_objects
         self.assertEqual(str(r2), "[Rectangle] ({}) 1/0 - 5/5".format(id))
+
+    def test_update(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89)
+        self.assertEqual(str(r1), "[Rectangle] (89) 10/10 - 10/10")
+        r1.update(89, 2, 3)
+        self.assertEqual(str(r1),"[Rectangle] (89) 10/10 - 2/3")
+        r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/3")
